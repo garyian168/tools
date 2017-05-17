@@ -10,6 +10,11 @@ mkdir /usr/local/python2.7.13
 ./configure --prefix=/usr/local/python2.7.13
 make
 make install
+if [ $? -eq 0 ];then
+     echo "Python2.7.13升级完成"
+else
+     echo "Python2.7.13升级失败，查看报错信息手动安装"
+fi
 
 #备份旧版本python
 cd
