@@ -12,3 +12,5 @@ def get_host_ip():
 
 res=get_host_ip()
 print(res)
+
+#https://www.chenyudong.com/archives/2017/04
