@@ -20,12 +20,11 @@ fi
 
 #备份旧版本python
 cd
-mv /usr/bin/python /usr/bin/python2.6
+mv /usr/bin/python /usr/bin/python2.6.6
 ln -s /usr/local/python2.7.13/bin/python2.7 /usr/bin/python
-sed -i '1s/python/python2.6/g' /usr/bin/yum
+sed -i '1s/python/python2.6.6/g' /usr/bin/yum
 
 #安装pip
-#wget --no-check-certificate https://bootstrap.pypa.io/get-pip.py
 wget https://bootstrap.pypa.io/get-pip.py
 python get-pip.py
 
@@ -43,8 +42,6 @@ cd
 mkdir /root/.pip/ && cd .pip
 cat > pip.conf <<EOF
 [global]
-timeout = 6000
-trusted-host =  mirrors.aliyun.com
 index-url = https://mirrors.aliyun.com/pypi/simple/
 
 [list]
